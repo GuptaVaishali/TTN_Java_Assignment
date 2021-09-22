@@ -1,4 +1,4 @@
-import java.util.Arrays;
+//import java.util.Arrays;
 import java.util.Scanner;
 
 public class Ques6 {
@@ -11,7 +11,7 @@ public class Ques6 {
         for(int i=0;i<n;i++){
             arr[i] = sc.nextInt();
         }
-        Arrays.sort(arr);
+    /*    Arrays.sort(arr);
 
         int unique_element = -1;
         boolean isThere = false;
@@ -29,6 +29,12 @@ public class Ques6 {
         if(unique_element != -1)
             System.out.println("Unique Element is = " + unique_element);
         else
-            System.out.println("Unique Element is not present in  array");
+            System.out.println("Unique Element is not present in  array"); */
+
+        int ans = arr[0];
+        for(int i=1;i<arr.length;i++){
+            ans = ans ^ arr[i];
+        }
+        System.out.println("Unique Element is = " + ans);
     }
 }
