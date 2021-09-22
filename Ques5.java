@@ -22,14 +22,12 @@ public class Ques5 {
             arr2[j] = sc.next();
         }
 
-        for(int i=0;i<n;i++) {
-            for (int j = 0; j < m; j++) {
-                if (arr1[i].equals(arr2[j])) {
-                    System.out.println("Duplicate element " + arr1[i]);
-                    break;
-                }
-            }
-        }
+        HashSet<String> set1 = new HashSet<>(Arrays.asList(arr1));
+        HashSet<String> set2 = new HashSet<>(Arrays.asList(arr2));
+
+        set1.retainAll(set2);
+        System.out.println("Common Elements: ");
+        set1.forEach((val) -> System.out.println(val));
     }
 }
 
